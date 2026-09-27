@@ -747,7 +747,7 @@
               </div>
               <div class="field">
                 <label for="event-note">DETAILS OR CHANGES <span aria-hidden="true">(OPTIONAL)</span></label>
-                <textarea id="event-note" name="event-note" placeholder="New time, ticket link, age range, access notes…"></textarea>
+                <textarea id="event-note" name="event-note" placeholder="New time, ticket link, age range…"></textarea>
               </div>
             </div>
             <div class="submit-actions">
@@ -818,10 +818,6 @@
       <section class="info-block">
         <h2>How this works</h2>
         <p>Events come from public local listings. Only events open to the public are included. Details are checked against the original listing when it’s available; anything still being traced is marked on the card. Check the source before leaving in case plans change.</p>
-      </section>
-      <section class="info-block">
-        <h2>Accessibility notes</h2>
-        <p>“Not confirmed” means the listing didn’t say. We won’t guess about stairs, parking surfaces, grass, gravel, restrooms or wheelchair routes.</p>
       </section>
     </aside>
 
@@ -1466,7 +1462,7 @@
           '<div class="tags"><span class="tag">' + escapeHtml(event.typeLabel) + '</span><span class="tag age">' + escapeHtml(event.ageLabel) + '</span></div>' +
           '<dl class="details"><div class="detail"><dt>Where</dt><dd>' + escapeHtml(event.address) + '</dd></div>' +
           '<div class="detail"><dt>Cost</dt><dd>' + escapeHtml(event.cost) + '</dd></div>' +
-          '<div class="detail"><dt>Access</dt><dd>' + escapeHtml(event.accessLabel) + '</dd></div></dl>' +
+          '</dl>' +
           '<p class="event-note">' + escapeHtml(event.note) + '</p><div class="event-links">' + sourceMarkup(event) +
           '<a class="claim-link" href="' + claimMailto(event) + '" data-claim-key="' + escapeHtml(key) + '">Own this event? Claim or update it</a></div></div></article>';
       }
