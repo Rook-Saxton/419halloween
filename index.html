@@ -1,0 +1,1843 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Halloween 2026 NW Ohio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --ink: #201b18;
+        --muted: #665b54;
+        --paper: #fbf7ef;
+        --surface: #fffdf8;
+        --surface-2: #f2eadc;
+        --line: #d9cbb8;
+        --orange: #d54b1a;
+        --orange-deep: #9f2f0a;
+        --green: #224d3d;
+        --green-soft: #dce9df;
+        --gold: #f0b640;
+        --night: #321a47;
+        --night-deep: #1d0e2b;
+        --plum: #57275f;
+        --lavender: #dcc7eb;
+        --moon: #ffd978;
+        --ghost: #fffaf0;
+        --bat: #191020;
+        --shadow: rgba(59, 35, 20, 0.12);
+        --focus: #0f6fc6;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #f7efe5;
+          --muted: #c9bcb0;
+          --paper: #171311;
+          --surface: #221c19;
+          --surface-2: #302721;
+          --line: #51443a;
+          --orange: #ff7848;
+          --orange-deep: #ff9b73;
+          --green: #90c7aa;
+          --green-soft: #263d33;
+          --gold: #f2bf54;
+          --night: #261332;
+          --night-deep: #120919;
+          --plum: #6d3a74;
+          --lavender: #e2c9f0;
+          --moon: #ffdc7d;
+          --ghost: #fff8ea;
+          --bat: #09060c;
+          --shadow: rgba(0, 0, 0, 0.28);
+          --focus: #7ac4ff;
+        }
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        min-width: 320px;
+        background:
+          radial-gradient(circle at 12px 12px, color-mix(in srgb, var(--orange) 7%, transparent) 1.4px, transparent 1.5px) 0 0 / 34px 34px,
+          var(--paper);
+        color: var(--ink);
+        font-family: "Libre Franklin", sans-serif;
+        line-height: 1.5;
+      }
+
+      button, input, select { font: inherit; }
+      a { color: inherit; }
+      .skip-link {
+        position: fixed;
+        top: 0.5rem;
+        left: 0.5rem;
+        z-index: 100;
+        transform: translateY(-180%);
+        background: var(--ink);
+        color: var(--paper);
+        padding: 0.65rem 0.9rem;
+      }
+      .skip-link:focus { transform: translateY(0); }
+
+      .page-shell {
+        width: min(1120px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 3.25rem 0 3rem;
+        border-bottom: 8px solid var(--orange);
+        background:
+          radial-gradient(circle at 12% 20%, rgba(255,255,255,0.72) 1px, transparent 1.5px),
+          radial-gradient(circle at 31% 70%, rgba(255,255,255,0.5) 1px, transparent 1.5px),
+          radial-gradient(circle at 72% 15%, rgba(255,255,255,0.6) 1px, transparent 1.5px),
+          radial-gradient(circle at 91% 64%, rgba(255,255,255,0.42) 1px, transparent 1.5px),
+          var(--night);
+        background-size: 82px 82px, 109px 109px, 137px 137px, 67px 67px, auto;
+        color: var(--ghost);
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        left: -3%;
+        right: -3%;
+        bottom: -1.45rem;
+        height: 2.4rem;
+        background: var(--paper);
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        pointer-events: none;
+      }
+      .hero-copy { position: relative; z-index: 2; max-width: 760px; }
+      .spooky-sky { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+      .moon {
+        position: absolute;
+        top: 1.5rem;
+        right: clamp(1.2rem, 8vw, 7rem);
+        width: clamp(5.5rem, 16vw, 10rem);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: var(--moon);
+        box-shadow: 0 0 0 0.65rem color-mix(in srgb, var(--moon) 14%, transparent);
+      }
+      .ghost-friend {
+        position: absolute;
+        right: clamp(3rem, 12vw, 11rem);
+        bottom: 0.8rem;
+        width: clamp(4.2rem, 11vw, 7rem);
+        color: var(--ghost);
+        filter: drop-shadow(0 8px 10px rgba(0,0,0,0.18));
+        animation: ghost-float 3.4s ease-in-out infinite;
+      }
+      .bat {
+        position: absolute;
+        width: 2.5rem;
+        color: var(--bat);
+        animation: bat-wiggle 2.8s ease-in-out infinite;
+      }
+      .bat-one { top: 1.3rem; right: 34%; transform: rotate(-8deg); }
+      .bat-two { top: 4.5rem; right: 24%; width: 1.65rem; animation-delay: -1.2s; }
+      .bat-three { bottom: 2.3rem; right: 4%; width: 2rem; animation-delay: -2s; }
+      @keyframes ghost-float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-8px) rotate(2deg); } }
+      @keyframes bat-wiggle { 0%, 100% { translate: 0 0; rotate: -4deg; } 50% { translate: 0 -5px; rotate: 4deg; } }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 {
+        max-width: 680px;
+        margin-bottom: 0.8rem;
+        font-family: "Bree Serif", Georgia, serif;
+        font-size: clamp(2.7rem, 10vw, 5.7rem);
+        font-weight: 400;
+        line-height: 0.96;
+        letter-spacing: -0.025em;
+      }
+      .hero h1 span { color: var(--orange); text-shadow: 3px 3px 0 var(--night-deep); }
+      .lede {
+        max-width: 650px;
+        margin-bottom: 1rem;
+        color: color-mix(in srgb, var(--ghost) 82%, transparent);
+        font-size: clamp(1.05rem, 2.6vw, 1.25rem);
+      }
+      .updated {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        margin: 0;
+        color: var(--moon);
+        font-size: 0.86rem;
+        font-weight: 700;
+      }
+      .updated::before {
+        content: "";
+        width: 0.55rem;
+        height: 0.55rem;
+        border-radius: 50%;
+        background: var(--moon);
+        box-shadow: 0 0 0 4px color-mix(in srgb, var(--moon) 18%, transparent);
+      }
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+      }
+
+      .submit-zone {
+        position: relative;
+        z-index: 4;
+        background: var(--plum);
+        color: var(--ghost);
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+      }
+      .submit-panel { overflow: hidden; }
+      .submit-toggle {
+        display: block;
+        cursor: pointer;
+        list-style: none;
+      }
+      .submit-toggle::-webkit-details-marker { display: none; }
+      .submit-toggle-inner {
+        display: flex;
+        min-height: 3.35rem;
+        align-items: center;
+        gap: 0.7rem;
+        padding-top: 0.65rem;
+        padding-bottom: 0.65rem;
+      }
+      .submit-toggle-title {
+        font-family: "Bree Serif", Georgia, serif;
+        font-size: 1.22rem;
+        line-height: 1.1;
+      }
+      .submit-toggle-note {
+        color: color-mix(in srgb, var(--ghost) 76%, transparent);
+        font-size: 0.78rem;
+      }
+      .submit-toggle-icon {
+        position: relative;
+        width: 1.35rem;
+        height: 1.35rem;
+        margin-left: auto;
+        flex: 0 0 auto;
+        border: 1px solid color-mix(in srgb, var(--ghost) 48%, transparent);
+        border-radius: 50%;
+      }
+      .submit-toggle-icon::before,
+      .submit-toggle-icon::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0.62rem;
+        height: 2px;
+        background: currentColor;
+        transform: translate(-50%, -50%);
+      }
+      .submit-toggle-icon::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform 160ms ease; }
+      .submit-panel[open] .submit-toggle-icon::after { transform: translate(-50%, -50%) rotate(0); }
+      .submit-panel[open] .submit-toggle { border-bottom: 1px solid color-mix(in srgb, var(--ghost) 18%, transparent); }
+      .submit-toggle:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
+      .submit-body {
+        display: grid;
+        gap: 1.15rem;
+        padding-top: 1.15rem;
+        padding-bottom: 1.25rem;
+      }
+      .submit-panel:not([open]) .submit-body { display: none; }
+      .submit-copy p {
+        margin-bottom: 0;
+        color: color-mix(in srgb, var(--ghost) 84%, transparent);
+        font-size: 0.9rem;
+      }
+      .submit-form { display: grid; gap: 0.65rem; }
+      .submit-fields { display: grid; gap: 0.65rem; }
+      .field { display: grid; gap: 0.28rem; }
+      .field[hidden] { display: none !important; }
+      .submit-form label {
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+      .field-help {
+        color: color-mix(in srgb, var(--ghost) 72%, transparent);
+        font-size: 0.72rem;
+        line-height: 1.35;
+      }
+      .submit-form input,
+      .submit-form select,
+      .submit-form textarea {
+        width: 100%;
+        border: 1px solid color-mix(in srgb, var(--paper) 45%, transparent);
+        border-radius: 0;
+        background: var(--surface);
+        color: var(--ink);
+        padding: 0.72rem 0.78rem;
+      }
+      .submit-form textarea { min-height: 4.8rem; resize: vertical; }
+      .submit-form input:focus-visible,
+      .submit-form select:focus-visible,
+      .submit-form textarea:focus-visible,
+      .submit-button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+      .submit-actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+      }
+      .submit-button {
+        border: 0;
+        background: var(--orange);
+        color: #fff;
+        padding: 0.72rem 0.9rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .submit-hint, .submit-status {
+        margin: 0;
+        color: color-mix(in srgb, var(--ghost) 78%, transparent);
+        font-size: 0.76rem;
+      }
+      .submit-status { min-height: 1.15rem; color: var(--ghost); }
+      .submit-status a { color: var(--moon); font-weight: 700; text-underline-offset: 0.16em; }
+      .finder { padding: 0 0 3rem; }
+      .search-panel {
+        margin-top: 1rem;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        box-shadow: 0 14px 38px var(--shadow);
+      }
+      .search-wrap {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+      }
+      .search-field { position: relative; min-width: 0; }
+      .search-field svg {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        width: 1.25rem;
+        transform: translateY(-50%);
+        color: var(--muted);
+      }
+      #search {
+        width: 100%;
+        min-height: 3.5rem;
+        border: 0;
+        background: transparent;
+        color: var(--ink);
+        padding: 0.85rem 1rem 0.85rem 3rem;
+        outline: 0;
+      }
+      #search::placeholder { color: var(--muted); opacity: 0.88; }
+      #search:focus { box-shadow: inset 0 0 0 3px var(--focus); }
+      .search-button {
+        min-width: 6.5rem;
+        border: 0;
+        background: var(--orange);
+        color: #fff;
+        padding: 0.7rem 1rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .search-button:focus-visible,
+      .source-link:focus-visible,
+      .claim-link:focus-visible,
+      .reset:focus-visible,
+      .plan-button:focus-visible,
+      .clear-plan:focus-visible,
+      .pick-control input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+      .plan-tray {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 0.8rem 0.9rem;
+        align-items: center;
+        margin-top: 1rem;
+        background: var(--night);
+        color: var(--ghost);
+        padding: 0.9rem 1rem;
+        border-bottom: 4px solid var(--orange);
+        box-shadow: 0 8px 22px var(--shadow);
+      }
+      .plan-ghost { width: 2.55rem; color: var(--ghost); }
+      .plan-copy strong { display: block; font-family: "Bree Serif", Georgia, serif; font-size: 1.05rem; font-weight: 400; }
+      .plan-copy span { display: block; color: color-mix(in srgb, var(--ghost) 72%, transparent); font-size: 0.75rem; }
+      .plan-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+      .plan-status { grid-column: 1 / -1; min-height: 0; margin: 0; color: var(--moon); font-size: 0.76rem; }
+      .plan-status:empty { display: none; }
+      .plan-status a,
+      .plan-status button { color: inherit; font-weight: 700; text-underline-offset: 0.16em; }
+      .plan-status button {
+        border: 0;
+        background: transparent;
+        padding: 0;
+        font: inherit;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .plan-status .pdf-actions { display: inline-flex; flex-wrap: wrap; gap: 0.35rem 0.8rem; }
+      .plan-button, .clear-plan {
+        border: 0;
+        padding: 0.65rem 0.8rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .plan-button { background: var(--orange); color: #fff; flex: 1; }
+      .plan-button:disabled { cursor: not-allowed; opacity: 0.48; }
+      .clear-plan { background: transparent; color: var(--ghost); text-decoration: underline; text-underline-offset: 0.18em; }
+      .clear-plan[hidden] { display: none; }
+
+      .results-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin: 1.7rem 0 0.9rem;
+      }
+      .results-bar h2 {
+        margin: 0;
+        font-family: "Bree Serif", Georgia, serif;
+        font-size: clamp(1.55rem, 5vw, 2rem);
+        font-weight: 400;
+      }
+      .results-count { color: var(--muted); font-size: 0.88rem; white-space: nowrap; }
+
+      .event-list {
+        display: grid;
+        gap: 0.8rem;
+      }
+      .event-card {
+        display: grid;
+        grid-template-columns: 4rem minmax(0, 1fr);
+        gap: 0.9rem;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        padding: 1rem;
+        box-shadow: 0 4px 16px var(--shadow);
+        transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+      }
+      .event-card.is-selected {
+        border-color: var(--orange);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--orange) 20%, transparent), 0 6px 20px var(--shadow);
+        background: color-mix(in srgb, var(--surface) 92%, var(--moon));
+      }
+      .event-content { min-width: 0; }
+      .event-heading-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.7rem; }
+      .event-heading-row h3 { flex: 1; }
+      .pick-control {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        flex: 0 0 auto;
+        border: 1px solid var(--line);
+        background: var(--surface-2);
+        color: var(--ink);
+        padding: 0.36rem 0.52rem;
+        cursor: pointer;
+      }
+      .pick-control input {
+        position: static;
+        width: 1rem;
+        height: 1rem;
+        margin: 0;
+        opacity: 1;
+        pointer-events: auto;
+        accent-color: var(--orange);
+        cursor: pointer;
+      }
+      .pick-control span {
+        display: inline;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        padding: 0;
+        font-size: 0.72rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .pick-control:has(input:checked) { background: var(--orange); border-color: var(--orange); color: #fff; }
+      .date-block {
+        align-self: start;
+        text-align: center;
+        border-top: 4px solid var(--orange);
+        background: var(--surface-2);
+        padding: 0.4rem 0.2rem 0.5rem;
+      }
+      .date-month {
+        display: block;
+        color: var(--orange-deep);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .date-day {
+        display: block;
+        font-family: "Bree Serif", Georgia, serif;
+        font-size: 1.85rem;
+        line-height: 1.05;
+      }
+      .event-topline {
+        margin: 0 0 0.25rem;
+        color: var(--orange-deep);
+        font-size: 0.78rem;
+        font-weight: 700;
+      }
+      .event-card h3 {
+        margin-bottom: 0.4rem;
+        font-family: "Bree Serif", Georgia, serif;
+        font-size: 1.22rem;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin-bottom: 0.7rem;
+      }
+      .tag {
+        display: inline-block;
+        background: var(--surface-2);
+        color: var(--muted);
+        padding: 0.18rem 0.48rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+      }
+      .tag.age { background: var(--green-soft); color: var(--green); }
+      .details {
+        display: grid;
+        gap: 0.45rem;
+        margin: 0 0 0.8rem;
+      }
+      .detail {
+        display: grid;
+        grid-template-columns: 5.4rem minmax(0, 1fr);
+        gap: 0.45rem;
+        font-size: 0.84rem;
+      }
+      .detail dt { color: var(--muted); font-weight: 700; }
+      .detail dd { margin: 0; }
+      .event-note {
+        margin-bottom: 0.8rem;
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+      .event-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.55rem 0.9rem;
+      }
+      .source-link,
+      .claim-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-underline-offset: 0.2em;
+      }
+      .source-link { color: var(--orange-deep); }
+      .claim-link { color: var(--green); }
+      .source-link svg { width: 0.9rem; }
+      .source-pending { color: var(--muted); font-size: 0.8rem; font-weight: 700; }
+
+      .empty-state {
+        display: none;
+        border: 1px dashed var(--line);
+        background: var(--surface);
+        padding: 2.5rem 1rem;
+        text-align: center;
+      }
+      .empty-state h3 {
+        margin-bottom: 0.35rem;
+        font-family: "Bree Serif", Georgia, serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+      .empty-state p { color: var(--muted); }
+      .reset {
+        border: 0;
+        background: var(--orange);
+        color: #fff;
+        padding: 0.65rem 0.85rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .notes {
+        display: grid;
+        gap: 1rem;
+        padding: 0 0 3rem;
+      }
+      .info-block { border-top: 4px solid var(--green); padding-top: 1rem; }
+      .info-block h2 {
+        margin-bottom: 0.45rem;
+        font-family: "Bree Serif", Georgia, serif;
+        font-size: 1.45rem;
+        font-weight: 400;
+      }
+      .info-block p { margin-bottom: 0; color: var(--muted); font-size: 0.9rem; }
+      .credit {
+        border-top: 1px solid var(--line);
+        padding: 1.2rem 0 calc(1.2rem + env(safe-area-inset-bottom));
+        color: var(--muted);
+        font-size: 0.78rem;
+        text-align: center;
+      }
+
+      @media (min-width: 640px) {
+        .page-shell { width: min(1120px, calc(100% - 3rem)); }
+        .hero { padding-top: 4.5rem; }
+        .hero-copy { max-width: 68%; }
+        .submit-body { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); padding-top: 1.4rem; padding-bottom: 1.5rem; }
+        .submit-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .field-wide { grid-column: 1 / -1; }
+        .plan-tray { grid-template-columns: auto minmax(0, 1fr) auto; }
+        .plan-actions { grid-column: auto; flex-wrap: nowrap; }
+        .plan-status { grid-column: 2 / -1; text-align: right; }
+        .plan-button { flex: none; }
+        .event-card { grid-template-columns: 4.6rem minmax(0, 1fr); padding: 1.2rem; }
+        .notes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+
+      @media (min-width: 940px) {
+        .event-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .event-card { min-height: 20rem; }
+      }
+
+      @media (max-width: 639px) {
+        .page-shell { width: calc(100% - 1.25rem); }
+        .submit-toggle-inner { min-height: 3rem; gap: 0.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .submit-toggle-title { font-size: 1.08rem; }
+        .submit-toggle-note { font-size: 0.72rem; }
+        .submit-body { gap: 0.9rem; padding-top: 0.9rem; padding-bottom: 1rem; }
+        .hero { padding: 2.6rem 0 2.45rem; }
+        .hero-copy { padding-right: 2.35rem; }
+        h1 { font-size: clamp(2.45rem, 13vw, 3.45rem); margin-bottom: 0.65rem; }
+        .lede { margin-bottom: 0.8rem; font-size: 1rem; }
+        .moon { top: 0.9rem; right: 0.55rem; width: 3.7rem; }
+        .ghost-friend { right: 0.55rem; bottom: 0.85rem; width: 3.25rem; }
+        .bat-one { top: 0.65rem; right: 31%; width: 1.45rem; }
+        .bat-two, .bat-three { display: none; }
+        .search-panel { margin-top: 0.7rem; }
+        .search-wrap { grid-template-columns: 1fr; }
+        .search-button { min-height: 3rem; }
+        .plan-tray { grid-template-columns: 2.2rem minmax(0, 1fr); gap: 0.6rem 0.7rem; margin-top: 0.75rem; padding: 0.75rem 0.8rem; }
+        .plan-ghost { width: 2.2rem; }
+        .plan-actions { gap: 0.45rem; }
+        .plan-button, .clear-plan { padding: 0.62rem 0.7rem; }
+        .results-bar { margin: 1.35rem 0 0.7rem; }
+        .event-list { gap: 0.65rem; }
+        .event-card { grid-template-columns: 3.45rem minmax(0, 1fr); gap: 0.7rem; padding: 0.8rem; }
+        .date-day { font-size: 1.6rem; }
+        .event-heading-row { display: block; }
+        .pick-control { display: inline-flex; margin-bottom: 0.5rem; }
+        .detail { grid-template-columns: 4.25rem minmax(0, 1fr); }
+        .notes { gap: 0.8rem; padding-bottom: 2.2rem; }
+      }
+
+      @media print {
+        body { background: #fff; color: #111; }
+        .hero, .submit-zone, .search-panel, .plan-tray, .notes, .credit, .pick-control, .source-link, .results-bar { display: none !important; }
+        .page-shell { width: 100%; }
+        .finder { padding: 0; }
+        .event-list { display: grid !important; grid-template-columns: 1fr; }
+        body.has-selections .event-card:not(.is-selected) { display: none; }
+        .event-card { min-height: 0; box-shadow: none; break-inside: avoid; border-color: #aaa; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .ghost-friend, .bat { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#events">Skip to events</a>
+
+    <section class="submit-zone" id="submit-event" aria-labelledby="submit-heading">
+      <details class="submit-panel">
+        <summary class="submit-toggle">
+          <span class="page-shell submit-toggle-inner">
+            <span class="submit-toggle-title" id="submit-heading" role="heading" aria-level="2">Submit or update an event</span>
+            <span class="submit-toggle-note">Owners can claim listings</span>
+            <span class="submit-toggle-icon" aria-hidden="true"></span>
+          </span>
+        </summary>
+        <div class="page-shell submit-body">
+          <div class="submit-copy">
+            <p>Know one we missed? Send the event link. If you run an event already listed, choose “Claim or update” and tell us what should change. We’ll reply to verify your connection before marking a listing as claimed.</p>
+          </div>
+          <form class="submit-form" id="event-submission">
+            <div class="submit-fields">
+              <div class="field">
+                <label for="request-kind">I WANT TO</label>
+                <select id="request-kind" name="request-kind">
+                  <option value="submit">Submit a new event</option>
+                  <option value="claim">Claim or update a listed event</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="owner-contact">YOUR EMAIL</label>
+                <input id="owner-contact" name="owner-contact" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required />
+              </div>
+              <div class="field field-wide" id="claim-event-field" hidden>
+                <label for="claim-event">EVENT TO CLAIM OR UPDATE</label>
+                <select id="claim-event" name="claim-event">
+                  <option value="">Choose an event</option>
+                  <option value="2026-09-12|Field of Fear">Field of Fear — Sep 12–Oct 31</option>
+                  <option value="2026-09-19|Haunted Town Hall">Haunted Town Hall — Sep 19–Oct 31</option>
+                  <option value="2026-09-19|Pumpkin Train">Pumpkin Train — Sep 19–Oct 25</option>
+                  <option value="2026-09-20|Pumpkin Fest">Pumpkin Fest — Sep 20–Oct 19</option>
+                  <option value="2026-09-25|Halloween Express">Halloween Express — Sep 25–Oct 31</option>
+                  <option value="2026-09-25|Luckey Fall Festival">Luckey Fall Festival — Sep 25–27</option>
+                  <option value="2026-09-26|ScreamAcres Haunted Attraction">ScreamAcres Haunted Attraction — Sep 26–Nov 1</option>
+                  <option value="2026-10-02|Plants and Pottery: Jack-O-Plantern&#x27;s">Plants and Pottery: Jack-O-Plantern&#x27;s — Oct 2–16</option>
+                  <option value="2026-10-03|Not Fast Enuff @ SandBar Grille Halloween Party">Not Fast Enuff @ SandBar Grille Halloween Party — Oct 3</option>
+                  <option value="2026-10-04|FOCA&#x27;s Trunk or Treat 2026">FOCA&#x27;s Trunk or Treat 2026 — Oct 4</option>
+                  <option value="2026-10-06|Halloween Rec Jam">Halloween Rec Jam — Oct 6</option>
+                  <option value="2026-10-08|Witches Brew for CASA Halloween Bar &amp; Shop Hop">Witches Brew for CASA Halloween Bar &amp; Shop Hop — Oct 8</option>
+                  <option value="2026-10-09|Haunted CAC">Haunted CAC — Oct 9–10</option>
+                  <option value="2026-10-09|Kids Halloween Party">Kids Halloween Party — Oct 9</option>
+                  <option value="2026-10-09|SOAR Halloween Events">SOAR Halloween Events — Oct 9–10</option>
+                  <option value="2026-10-15|Harvest Fest Puzzle Hustle">Harvest Fest Puzzle Hustle — Oct 15</option>
+                  <option value="2026-10-15|Little Boo at the Zoo">Little Boo at the Zoo — Oct 15–16</option>
+                  <option value="2026-10-16|Garrison Ghost Walk at Fort Meigs">Garrison Ghost Walk at Fort Meigs — Oct 16–24</option>
+                  <option value="2026-10-17|2nd Annual Harbor View Halloween Block Party">2nd Annual Harbor View Halloween Block Party — Oct 17</option>
+                  <option value="2026-10-17|Pumpkin Palooza">Pumpkin Palooza — Oct 17</option>
+                  <option value="2026-10-17|Toledo Zoo Pumpkin Path">Toledo Zoo Pumpkin Path — Oct 17–18</option>
+                  <option value="2026-10-17|Trick or Treat Halloween Train">Trick or Treat Halloween Train — Oct 17–24</option>
+                  <option value="2026-10-23|Trunk-or-Treat">Trunk-or-Treat — Oct 23</option>
+                  <option value="2026-10-24|Halloween at the Bay">Halloween at the Bay — Oct 24</option>
+                  <option value="2026-10-24|Halloween Bash &#x27;26">Halloween Bash &#x27;26 — Oct 24</option>
+                  <option value="2026-10-24|Low-Rider Halloween Meetup">Low-Rider Halloween Meetup — Oct 24</option>
+                  <option value="2026-10-24|Trunk Or Treat">Trunk Or Treat — Oct 24</option>
+                  <option value="2026-10-24|Trunk or Treat at St. Michael">Trunk or Treat at St. Michael — Oct 24</option>
+                  <option value="2026-10-27|Cops &amp; Kids Findlay Halloween Parade">Cops &amp; Kids Findlay Halloween Parade — Oct 27</option>
+                  <option value="2026-10-28|Halloween Boo! Cruise on the Sandpiper">Halloween Boo! Cruise on the Sandpiper — Oct 28</option>
+                  <option value="2026-10-30|Frightfully Fun Halloween Cruise (Sandpiper)">Frightfully Fun Halloween Cruise (Sandpiper) — Oct 30</option>
+                  <option value="2026-10-31|Toledo Halloween Bar Crawl 2026">Toledo Halloween Bar Crawl 2026 — Oct 31</option>
+                </select>
+              </div>
+              <div class="field field-wide">
+                <label for="event-url" id="event-url-label">EVENT LINK</label>
+                <input id="event-url" name="event-url" type="url" inputmode="url" autocomplete="url" placeholder="https://facebook.com/events/…" aria-describedby="event-url-help" required />
+                <span class="field-help" id="event-url-help">Required for a new event so we can verify the details.</span>
+              </div>
+              <div class="field">
+                <label for="event-name" id="event-name-label">EVENT NAME <span aria-hidden="true">(OPTIONAL)</span></label>
+                <input id="event-name" name="event-name" type="text" autocomplete="off" />
+              </div>
+              <div class="field">
+                <label for="event-date">DATE IF KNOWN <span aria-hidden="true">(OPTIONAL)</span></label>
+                <input id="event-date" name="event-date" type="date" />
+              </div>
+              <div class="field">
+                <label for="submitted-by">YOUR NAME <span aria-hidden="true">(OPTIONAL)</span></label>
+                <input id="submitted-by" name="submitted-by" type="text" autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="event-note">DETAILS OR CHANGES <span aria-hidden="true">(OPTIONAL)</span></label>
+                <textarea id="event-note" name="event-note" placeholder="New time, ticket link, age range, access notes…"></textarea>
+              </div>
+            </div>
+            <div class="submit-actions">
+              <button class="submit-button" type="submit">Open email to send</button>
+            </div>
+            <p class="submit-status" id="submit-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </details>
+    </section>
+
+    <header class="hero">
+      <div class="spooky-sky" aria-hidden="true">
+        <div class="moon"></div>
+        <svg class="ghost-friend" viewBox="0 0 100 112" fill="none"><path fill="currentColor" d="M12 104V50C12 22 28 7 50 7s38 15 38 43v54l-13-10-12 11-13-11-13 11-12-11-13 10Z"/><ellipse cx="37" cy="48" rx="5" ry="7" fill="#321a47"/><ellipse cx="63" cy="48" rx="5" ry="7" fill="#321a47"/><path d="M39 69c7 5 15 5 22 0" stroke="#321a47" stroke-width="4" stroke-linecap="round"/></svg>
+        <svg class="bat bat-one" viewBox="0 0 74 34" fill="currentColor"><path d="M37 15C29 4 18 2 9 7l4 5-10 3c6 3 11 8 14 15 5-4 11-6 20-6s15 2 20 6c3-7 8-12 14-15l-10-3 4-5c-9-5-20-3-28 8Z"/></svg>
+        <svg class="bat bat-two" viewBox="0 0 74 34" fill="currentColor"><path d="M37 15C29 4 18 2 9 7l4 5-10 3c6 3 11 8 14 15 5-4 11-6 20-6s15 2 20 6c3-7 8-12 14-15l-10-3 4-5c-9-5-20-3-28 8Z"/></svg>
+        <svg class="bat bat-three" viewBox="0 0 74 34" fill="currentColor"><path d="M37 15C29 4 18 2 9 7l4 5-10 3c6 3 11 8 14 15 5-4 11-6 20-6s15 2 20 6c3-7 8-12 14-15l-10-3 4-5c-9-5-20-3-28 8Z"/></svg>
+      </div>
+      <div class="page-shell hero-copy">
+        <h1>Find your <span>Halloween</span> plans.</h1>
+        <p class="lede">Public trunk-or-treats, parties, cruises and fall events around Northwest Ohio and nearby Southeast Michigan.</p>
+        <div class="hero-actions">
+          <p class="updated">Updated September 26, 2026</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell finder" id="events">
+      <form class="search-panel" id="event-search" role="search">
+        <div class="search-wrap">
+          <div class="search-field">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+            <label for="search" class="skip-link">Search events</label>
+            <input id="search" type="search" placeholder="Search by event, town or venue" autocomplete="off" />
+          </div>
+          <button class="search-button" type="submit">Search</button>
+        </div>
+      </form>
+
+      <section class="plan-tray" aria-label="Fridge plan builder">
+        <svg class="plan-ghost" aria-hidden="true" viewBox="0 0 56 64" fill="none"><path fill="currentColor" d="M6 60V29C6 13 15 4 28 4s22 9 22 25v31l-8-6-7 7-7-7-7 7-7-7-8 6Z"/><circle cx="21" cy="28" r="3" fill="#321a47"/><circle cx="35" cy="28" r="3" fill="#321a47"/><path d="M22 39c4 3 8 3 12 0" stroke="#321a47" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <div class="plan-copy">
+          <strong id="plan-count">Pick events for your fridge</strong>
+          <span>Tap “Add” on any event, then open a clean printable PDF.</span>
+        </div>
+        <div class="plan-actions">
+          <button class="clear-plan" id="clear-plan" type="button" hidden>Clear</button>
+          <button class="plan-button" id="download-plan" type="button" disabled>Download fridge PDF</button>
+        </div>
+        <p class="plan-status" id="plan-status" aria-live="polite"></p>
+      </section>
+
+      <div class="results-bar">
+        <h2>Fall 2026 events</h2>
+        <div class="results-count" id="results-count" aria-live="polite"></div>
+      </div>
+
+      <div class="event-list" id="event-list"></div>
+      <div class="empty-state" id="empty-state">
+        <h3>No matches yet</h3>
+        <p>Try another event name, town or venue.</p>
+        <button type="button" class="reset" id="reset">Clear search</button>
+      </div>
+    </main>
+
+    <aside class="page-shell notes" aria-label="About this event list">
+      <section class="info-block">
+        <h2>How this works</h2>
+        <p>Events come from public local listings. Only events open to the public are included. Details are checked against the original listing when it’s available; anything still being traced is marked on the card. Check the source before leaving in case plans change.</p>
+      </section>
+      <section class="info-block">
+        <h2>Accessibility notes</h2>
+        <p>“Not confirmed” means the listing didn’t say. We won’t guess about stairs, parking surfaces, grass, gravel, restrooms or wheelchair routes.</p>
+      </section>
+    </aside>
+
+    <footer class="credit">Scanned nightly by an AI agent for @aibutmakeitreal — AI but make it real.</footer>
+
+    <script>
+      // Nightly updates only need to replace or extend this array.
+      const events = [
+              {
+                      "name": "Field of Fear",
+                      "date": "2026-09-12",
+                      "time": "gates 7 PM; haunts begin at dark; Fri-Sat",
+                      "town": "Monclova, OH",
+                      "venue": "3001 S Crissey Rd",
+                      "address": "3001 S Crissey Rd, Monclova, OH 43542",
+                      "type": "haunted",
+                      "typeLabel": "Haunted attraction",
+                      "age": "general",
+                      "ageLabel": "not stated ('not for the faint of heart')",
+                      "cost": "$30 combo pass",
+                      "accessibility": "terrain",
+                      "accessLabel": "unconfirmed - outdoor farm attraction",
+                      "note": "Four haunted mazes including hayride; currently running through Oct 31",
+                      "source": "https://halloween-events-near-me.com/monclova-oh-field-of-fear/",
+                      "dateLabel": "Sep 12–Oct 31"
+              },
+              {
+                      "name": "Haunted Town Hall",
+                      "date": "2026-09-19",
+                      "time": "not stated - check site for operating nights",
+                      "town": "Lafayette, OH",
+                      "venue": "Lafayette Town Hall",
+                      "address": "Lafayette Town Hall, 103 S High St, Lafayette, OH 45854",
+                      "type": "haunted",
+                      "typeLabel": "Haunted house",
+                      "age": "adult",
+                      "ageLabel": "10+ (under 16 with adult)",
+                      "cost": "$15",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Haunted house; currently running through Oct 31",
+                      "source": "https://halloween-events-near-me.com/toledo-oh-haunted-town-hall/",
+                      "dateLabel": "Sep 19–Oct 31"
+              },
+              {
+                      "name": "Pumpkin Train",
+                      "date": "2026-09-19",
+                      "time": "not stated",
+                      "town": "Findlay, OH",
+                      "venue": "Northwest Ohio Railroad Preservation",
+                      "address": "Northwest Ohio Railroad Preservation, 12505 County Rd 99, Findlay, OH 45840",
+                      "type": "train",
+                      "typeLabel": "Train ride",
+                      "age": "family",
+                      "ageLabel": "all ages",
+                      "cost": "$3 adults, $2 children 12 & under",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Pumpkin-themed train rides; currently running",
+                      "source": "https://halloween-events-near-me.com/akron-oh-pumpkin-train/",
+                      "dateLabel": "Sep 19–Oct 25"
+              },
+              {
+                      "name": "Pumpkin Fest",
+                      "date": "2026-09-20",
+                      "time": "12:00-5:00 PM",
+                      "town": "Findlay, OH",
+                      "venue": "Northwest Ohio Railroad Preservation",
+                      "address": "Northwest Ohio Railroad Preservation, 12505 County Rd 99, Findlay, OH 45840",
+                      "type": "festival",
+                      "typeLabel": "Fall festival",
+                      "age": "family",
+                      "ageLabel": "all ages",
+                      "cost": "$5 per person per day",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Fall festival at the railroad museum; currently running",
+                      "source": "https://halloween-events-near-me.com/akron-oh-pumpkin-fest/",
+                      "dateLabel": "Sep 20–Oct 19"
+              },
+              {
+                      "name": "Halloween Express",
+                      "date": "2026-09-25",
+                      "time": "not stated",
+                      "town": "Findlay, OH",
+                      "venue": "Northwest Ohio Railroad Preservation",
+                      "address": "Northwest Ohio Railroad Preservation, 12505 County Rd 99, Findlay, OH 45840",
+                      "type": "train",
+                      "typeLabel": "Train ride",
+                      "age": "family",
+                      "ageLabel": "whole family",
+                      "cost": "$3 adults, $2 children 12 & under",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Halloween train rides; currently running through Oct 31",
+                      "source": "https://halloween-events-near-me.com/akron-oh-halloween-express/",
+                      "dateLabel": "Sep 25–Oct 31"
+              },
+              {
+                      "name": "Luckey Fall Festival",
+                      "date": "2026-09-25",
+                      "time": "not stated",
+                      "town": "Luckey, OH",
+                      "venue": "Luckey Festival Grounds",
+                      "address": "Luckey Festival Grounds, Adams St, Luckey, OH",
+                      "type": "festival",
+                      "typeLabel": "Fall festival",
+                      "age": "general",
+                      "ageLabel": "not stated",
+                      "cost": "$25-$75",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Sep 25-27; ends Sep 27",
+                      "source": "https://halloween-events-near-me.com/luckey-oh-luckey-fall-festival/",
+                      "dateLabel": "Sep 25–27"
+              },
+              {
+                      "name": "ScreamAcres Haunted Attraction",
+                      "date": "2026-09-26",
+                      "time": "not stated - check site for operating nights",
+                      "town": "Napoleon, OH",
+                      "venue": "Leaders Farms",
+                      "address": "Leaders Farms, 0064 Co Rd 16, Napoleon, OH 43545",
+                      "type": "haunted",
+                      "typeLabel": "Haunted attraction",
+                      "age": "family",
+                      "ageLabel": "no age requirement; not recommended for young children",
+                      "cost": "$5.72-$31.71",
+                      "accessibility": "terrain",
+                      "accessLabel": "unconfirmed - outdoor farm attraction",
+                      "note": "Haunted attraction at Leaders Farms; runs Sep 26-Nov 1",
+                      "source": "https://halloween-events-near-me.com/sumter-sc-scream-acres/",
+                      "dateLabel": "Sep 26–Nov 1"
+              },
+              {
+                      "name": "Plants and Pottery: Jack-O-Plantern's",
+                      "date": "2026-10-02",
+                      "time": "not stated",
+                      "town": "Perrysburg, OH",
+                      "venue": "Owens Community College",
+                      "address": "Owens Community College, Perrysburg, OH",
+                      "type": "workshop",
+                      "typeLabel": "Workshop",
+                      "age": "general",
+                      "ageLabel": "not stated",
+                      "cost": "$90",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Plant/pottery workshop; multiple session dates Oct 2-16",
+                      "source": "https://halloween-events-near-me.com/toledo-oh-plants-and-pottery-jack-o-plantern-s/",
+                      "dateLabel": "Oct 2–16"
+              },
+              {
+                      "name": "Not Fast Enuff @ SandBar Grille Halloween Party",
+                      "date": "2026-10-03",
+                      "time": "8:00 PM",
+                      "town": "",
+                      "venue": "SandBar Grille",
+                      "address": "SandBar Grille (address unconfirmed)",
+                      "type": "party",
+                      "typeLabel": "Party",
+                      "age": "adult",
+                      "ageLabel": "adult",
+                      "cost": "not stated",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "",
+                      "source": ""
+              },
+              {
+                      "name": "FOCA's Trunk or Treat 2026",
+                      "date": "2026-10-04",
+                      "time": "1:00-3:00 PM",
+                      "town": "Monroe, MI",
+                      "venue": "FOCA",
+                      "address": "2532 N Dixie Hwy, Monroe, MI",
+                      "type": "trunk-or-treat",
+                      "typeLabel": "Trunk-or-treat",
+                      "age": "family",
+                      "ageLabel": "kids / family",
+                      "cost": "free; donations welcome; adopt-a-ghost $1",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Costumed kids with an adult; games and free treats; hot dogs/pizza from Hungry Howies while supplies last; rain date Oct 11",
+                      "source": ""
+              },
+              {
+                      "name": "Halloween Rec Jam",
+                      "date": "2026-10-06",
+                      "time": "not stated",
+                      "town": "Maumee, OH",
+                      "venue": "Lucas County Rec Center",
+                      "address": "Lucas County Rec Center, 2901 Key St, Maumee, OH 43537",
+                      "type": "activity",
+                      "typeLabel": "Recreation",
+                      "age": "adult",
+                      "ageLabel": "adults 18+",
+                      "cost": "free",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "",
+                      "source": "https://halloween-events-near-me.com/toledo-oh-halloween-rec-jam/"
+              },
+              {
+                      "name": "Witches Brew for CASA Halloween Bar & Shop Hop",
+                      "date": "2026-10-08",
+                      "time": "not stated",
+                      "town": "Defiance, OH",
+                      "venue": "Defiance VFW Post 3360",
+                      "address": "Defiance VFW Post 3360, 201 Clinton St, Defiance, OH 43512",
+                      "type": "party",
+                      "typeLabel": "Bar & shop hop",
+                      "age": "adult",
+                      "ageLabel": "21+",
+                      "cost": "$30 (includes food and one drink ticket)",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Benefit event for CASA",
+                      "source": "https://halloween-events-near-me.com/middletown-oh-witches-brews-boos-halloween-bar-shop-hop/"
+              },
+              {
+                      "name": "Haunted CAC",
+                      "date": "2026-10-09",
+                      "time": "not stated",
+                      "town": "Toledo, OH",
+                      "venue": "Collingwood Arts Center",
+                      "address": "Collingwood Arts Center, 2413 Collingwood Blvd, Toledo, OH 43620",
+                      "type": "haunted",
+                      "typeLabel": "Haunted attraction",
+                      "age": "general",
+                      "ageLabel": "13+",
+                      "cost": "not stated",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Haunted attraction at the Collingwood Arts Center",
+                      "source": "https://halloween-events-near-me.com/toledo-oh-haunted-cac/",
+                      "dateLabel": "Oct 9–10"
+              },
+              {
+                      "name": "Kids Halloween Party",
+                      "date": "2026-10-09",
+                      "time": "6:00-9:00 PM",
+                      "town": "Southgate, MI",
+                      "venue": "16300 Dix Toledo Rd",
+                      "address": "16300 Dix Toledo Rd, Southgate, MI",
+                      "type": "party",
+                      "typeLabel": "Party",
+                      "age": "family",
+                      "ageLabel": "kids / family",
+                      "cost": "not stated",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Details TBA",
+                      "source": ""
+              },
+              {
+                      "name": "SOAR Halloween Events",
+                      "date": "2026-10-09",
+                      "time": "Trunk or Treat Fri 5:30-7:00 PM",
+                      "town": "Oregon, OH",
+                      "venue": "Maumee Bay State Park",
+                      "address": "Maumee Bay State Park, Oregon, OH",
+                      "type": "trunk-or-treat",
+                      "typeLabel": "Halloween weekend",
+                      "age": "general",
+                      "ageLabel": "families",
+                      "cost": "free",
+                      "accessibility": "terrain",
+                      "accessLabel": "unconfirmed - outdoor state park",
+                      "note": "Halloween weekend events; includes trunk or treat Friday evening",
+                      "source": "https://halloween-events-near-me.com/toledo-oh-soar-halloween-events/",
+                      "dateLabel": "Oct 9–10"
+              },
+              {
+                      "name": "Harvest Fest Puzzle Hustle",
+                      "date": "2026-10-15",
+                      "time": "not stated",
+                      "town": "Toledo, OH",
+                      "venue": "Toledo Zoo",
+                      "address": "Toledo Zoo, Toledo, OH",
+                      "type": "activity",
+                      "typeLabel": "Puzzle competition",
+                      "age": "general",
+                      "ageLabel": "not stated (team puzzle competition)",
+                      "cost": "$150 per team of four",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Competitive team puzzling event",
+                      "source": "https://halloween-events-near-me.com/toledo-oh-harvest-fest-puzzle-hustle/"
+              },
+              {
+                      "name": "Little Boo at the Zoo",
+                      "date": "2026-10-15",
+                      "time": "not stated",
+                      "town": "Toledo, OH",
+                      "venue": "Toledo Zoo",
+                      "address": "Toledo Zoo, 2 Hippo Way, Toledo, OH 43609",
+                      "type": "festival",
+                      "typeLabel": "Zoo event",
+                      "age": "family",
+                      "ageLabel": "all ages",
+                      "cost": "$29 adults/children non-members, $26 seniors; members: adults/seniors free, children $11",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Two-day Halloween event at the Toledo Zoo",
+                      "source": "https://halloween-events-near-me.com/toledo-oh-little-boo-at-the-zoo/",
+                      "dateLabel": "Oct 15–16"
+              },
+              {
+                      "name": "Garrison Ghost Walk at Fort Meigs",
+                      "date": "2026-10-16",
+                      "time": "not stated",
+                      "town": "Perrysburg, OH",
+                      "venue": "Fort Meigs Historic Site",
+                      "address": "Fort Meigs Historic Site, 29100 W River Rd, Perrysburg, OH 43551",
+                      "type": "haunted",
+                      "typeLabel": "Ghost walk",
+                      "age": "family",
+                      "ageLabel": "children 6+ (8 and under not appropriate; some late tours 18+)",
+                      "cost": "$17 adults 18+, $15 seniors 60+, $12 children 6-17",
+                      "accessibility": "terrain",
+                      "accessLabel": "unconfirmed - outdoor historic site",
+                      "note": "Guided ghost walk at the historic fort",
+                      "source": "https://halloween-events-near-me.com/perrysburg-oh-ghost-tour-of-perrysburg/",
+                      "dateLabel": "Oct 16–24"
+              },
+              {
+                      "name": "2nd Annual Harbor View Halloween Block Party",
+                      "date": "2026-10-17",
+                      "time": "5:00-9:00 PM",
+                      "town": "Oregon, OH",
+                      "venue": "Harbor View",
+                      "address": "327 Lakeview Dr, Oregon, OH",
+                      "type": "party",
+                      "typeLabel": "Block party",
+                      "age": "family",
+                      "ageLabel": "all ages / family",
+                      "cost": "not stated",
+                      "accessibility": "terrain",
+                      "accessLabel": "unconfirmed — outdoor block party",
+                      "note": "Chili/soup cook-off, adult + kids costume contests, raffles; proceeds to community events",
+                      "source": ""
+              },
+              {
+                      "name": "Pumpkin Palooza",
+                      "date": "2026-10-17",
+                      "time": "not stated",
+                      "town": "Toledo, OH",
+                      "venue": "Ottawa Park Open Air Shelter",
+                      "address": "Ottawa Park Open Air Shelter, 2200 Kenwood Blvd, Toledo, OH 43605",
+                      "type": "festival",
+                      "typeLabel": "Festival",
+                      "age": "family",
+                      "ageLabel": "all ages",
+                      "cost": "free",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "",
+                      "source": "https://halloween-events-near-me.com/toledo-oh-pumpkin-palooza/"
+              },
+              {
+                      "name": "Toledo Zoo Pumpkin Path",
+                      "date": "2026-10-17",
+                      "time": "10:00 AM-4:00 PM",
+                      "town": "Toledo, OH",
+                      "venue": "Toledo Zoo",
+                      "address": "Toledo Zoo, 2 Hippo Way, Toledo, OH 43609",
+                      "type": "festival",
+                      "typeLabel": "Zoo event",
+                      "age": "family",
+                      "ageLabel": "all ages",
+                      "cost": "$29 non-members (adults 12-59, children 11 & under), $26 seniors; members free",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "",
+                      "source": "https://halloween-events-near-me.com/toledo-oh-pumpkin-path/",
+                      "dateLabel": "Oct 17–18"
+              },
+              {
+                      "name": "Trick or Treat Halloween Train",
+                      "date": "2026-10-17",
+                      "time": "6:30-9:00 PM",
+                      "town": "Findlay, OH",
+                      "venue": "Northwest Ohio Railroad Preservation",
+                      "address": "Northwest Ohio Railroad Preservation, 12505 County Rd 99, Findlay, OH 45840",
+                      "type": "train",
+                      "typeLabel": "Train ride",
+                      "age": "family",
+                      "ageLabel": "all ages",
+                      "cost": "$3 adults, $2 children 12 & under",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Evening trick-or-treat train rides",
+                      "source": "https://halloween-events-near-me.com/findlay-oh-northwest-ohio-railroad-preservation-trick-or-treat-express/",
+                      "dateLabel": "Oct 17–24"
+              },
+              {
+                      "name": "Trunk-or-Treat",
+                      "date": "2026-10-23",
+                      "time": "5:00-7:30 PM",
+                      "town": "Allen Park, MI",
+                      "venue": "Allen Park Presbyterian Church",
+                      "address": "Park Ave, Allen Park, MI 48101",
+                      "type": "trunk-or-treat",
+                      "typeLabel": "Trunk-or-treat",
+                      "age": "family",
+                      "ageLabel": "family",
+                      "cost": "free",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "Annual; Allen Park Presbyterian Church; more info at allenparkpres.org/trunk-or-treat.html",
+                      "source": ""
+              },
+              {
+                      "name": "Halloween at the Bay",
+                      "date": "2026-10-24",
+                      "time": "8:00 AM",
+                      "town": "Put-in-Bay, OH",
+                      "venue": "148 Delaware Ave",
+                      "address": "148 Delaware Ave, Put-in-Bay, OH",
+                      "type": "festival",
+                      "typeLabel": "Festival",
+                      "age": "family",
+                      "ageLabel": "family (daytime)",
+                      "cost": "not stated",
+                      "accessibility": "terrain",
+                      "accessLabel": "island; ferry required; accessibility unconfirmed",
+                      "note": "Daytime event on the island — ferry needed",
+                      "source": ""
+              },
+              {
+                      "name": "Halloween Bash '26",
+                      "date": "2026-10-24",
+                      "time": "7:00 PM",
+                      "town": "Toledo, OH",
+                      "venue": "8950 Dorr St",
+                      "address": "8950 Dorr St, Toledo, OH",
+                      "type": "party",
+                      "typeLabel": "Party",
+                      "age": "adult",
+                      "ageLabel": "adult-leaning",
+                      "cost": "not stated",
+                      "accessibility": "unconfirmed",
+                      "accessLabel": "unconfirmed",
+                      "note": "",
+                      "source": ""
+              },
+              {
+                      "name": "Low-Rider Halloween Meetup",
+                      "date": "2026-10-24",
+                      "time": "1:00 PM",
+                      "town": "Toledo, OH",
+                      "venue": "3364 King Rd",
+                      "address": "3364 King Rd, Toledo, OH",
+                      "type": "party",
+                      "typeLabel": "Meetup",
+                      "age": "family",
+                      "ageLabel": "all ages / family (daytime car meetup)",
+                      "cost": "not stated",
+                      "accessibility": "terrain",
+                      "accessLabel": "unconfirmed — outdoor lot",
+                      "note": "Daytime car meetup",
+                      "source": ""
+              },
+              {
+                      "name": "Trunk Or Treat",
+                      "date": "2026-10-24",
+                      "time": "4:30-6:30 PM trunk-or-treat; movie 6:45 PM",
+                      "town": "Adrian, MI",
+                      "venue": "Church event",
+                      "address": "119 N Broad St, Adrian, MI",
+                      "type": "trunk-or-treat",
+                      "typeLabel": "Trunk-or-treat + movie",
+                      "age": "family",
+                      "ageLabel": "all ages",
+                      "cost": "not stated",
+                      "accessibility": "terrain",
+                      "accessLabel": "unconfirmed — parking lot + auditorium",
+                      "note": "Church event; trunk-or-treat 4:30-6:30 PM, family movie night in auditorium from 6:45 PM",
+                      "source": ""
+              },
+              {
+                      "name": "Trunk or Treat at St. Michael",
+                      "date": "2026-10-24",
+                      "time": "1:00-3:00 PM (trunk-or-treating from 1:30 PM)",
+                      "town": "Ottawa Lake, MI",
+                      "venue": "St. Michael Lutheran Church",
+                      "address": "5790 W Temperance Rd, Ottawa Lake, MI",
+                      "type": "trunk-or-treat",
+                      "typeLabel": "Trunk-or-treat",
+                      "age": "family",
+                      "ageLabel": "family",
+                      "cost": "not stated",
+                      "accessibility": "terrain",
+                      "accessLabel": "unconfirmed — church parking lot, outdoor",
+                      "note": "St. Michael Lutheran Church; bounce houses, popcorn & cotton candy, pumpkin painting, hayrides, playground; rain or shine",
+                      "source": ""
+              },
+              {
+                      "name": "Cops & Kids Findlay Halloween Parade",
+                      "date": "2026-10-27",
+                      "time": "not stated",
+                      "town": "Findlay, OH",
+                      "venue": "Downtown Findlay",
+                      "address": "Downtown Findlay, S Main St (6th St to Lima Ave), Findlay, OH 45840",
+                      "type": "parade",
+                      "typeLabel": "Parade",
+                      "age": "family",
+                      "ageLabel": "all ages",
+                      "cost": "free to attend; parade entry $0-$600 by entry type",
+                      "accessibility": "terrain",
+                      "accessLabel": "unconfirmed - outdoor parade route",
+                      "note": "",
+                      "source": "https://halloween-events-near-me.com/findlay-oh-lucky-s-halloween-party-with-streetwize/"
+              },
+              {
+                      "name": "Halloween Boo! Cruise on the Sandpiper",
+                      "date": "2026-10-28",
+                      "time": "5:30 PM",
+                      "town": "Toledo, OH",
+                      "venue": "Sandpiper",
+                      "address": "Water St at Jefferson Ave, Toledo, OH",
+                      "type": "cruise",
+                      "typeLabel": "Cruise",
+                      "age": "family",
+                      "ageLabel": "family",
+                      "cost": "not stated",
+                      "accessibility": "terrain",
+                      "accessLabel": "cruise boat; accessibility unconfirmed",
+                      "note": "Family-friendly 30-min cruise; 20+ year tradition",
+                      "source": ""
+              },
+              {
+                      "name": "Frightfully Fun Halloween Cruise (Sandpiper)",
+                      "date": "2026-10-30",
+                      "time": "9:00 PM",
+                      "town": "Toledo, OH",
+                      "venue": "Sandpiper",
+                      "address": "Water St at Jefferson Ave, Toledo, OH",
+                      "type": "cruise",
+                      "typeLabel": "Cruise",
+                      "age": "adult",
+                      "ageLabel": "adult (evening)",
+                      "cost": "not stated",
+                      "accessibility": "terrain",
+                      "accessLabel": "cruise boat; accessibility unconfirmed",
+                      "note": "Evening/adult-leaning cruise",
+                      "source": ""
+              },
+              {
+                      "name": "Toledo Halloween Bar Crawl 2026",
+                      "date": "2026-10-31",
+                      "time": "4:00 PM",
+                      "town": "Toledo, OH",
+                      "venue": "Ye Olde Cock n Bull",
+                      "address": "starts at Ye Olde Cock n Bull, Toledo, OH",
+                      "type": "party",
+                      "typeLabel": "Bar crawl",
+                      "age": "adult",
+                      "ageLabel": "adult 21+",
+                      "cost": "not stated",
+                      "accessibility": "terrain",
+                      "accessLabel": "unconfirmed — walking crawl, bars",
+                      "note": "21+; bar crawl route",
+                      "source": ""
+              }
+      ];
+
+      const list = document.getElementById("event-list");
+      const selectedEvents = new Set();
+      let currentPdfUrl = "";
+      const planCount = document.getElementById("plan-count");
+      const downloadPlan = document.getElementById("download-plan");
+      const clearPlan = document.getElementById("clear-plan");
+      const planStatus = document.getElementById("plan-status");
+      const count = document.getElementById("results-count");
+      const empty = document.getElementById("empty-state");
+      const search = document.getElementById("search");
+      const eventSearch = document.getElementById("event-search");
+      const reset = document.getElementById("reset");
+      const submissionForm = document.getElementById("event-submission");
+      const submitPanel = document.querySelector(".submit-panel");
+      const requestKind = document.getElementById("request-kind");
+      const ownerContact = document.getElementById("owner-contact");
+      const claimEventField = document.getElementById("claim-event-field");
+      const claimEvent = document.getElementById("claim-event");
+      const eventUrl = document.getElementById("event-url");
+      const eventUrlLabel = document.getElementById("event-url-label");
+      const eventUrlHelp = document.getElementById("event-url-help");
+      const submitButton = submissionForm.querySelector(".submit-button");
+      const eventName = document.getElementById("event-name");
+      const eventNameLabel = document.getElementById("event-name-label");
+      const eventDate = document.getElementById("event-date");
+      const submittedBy = document.getElementById("submitted-by");
+      const eventNote = document.getElementById("event-note");
+      const submitStatus = document.getElementById("submit-status");
+      const dateFormatter = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
+
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>'"]/g, function (char) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char];
+        });
+      }
+
+      function sourceMarkup(event) {
+        if (!event.source) return '<span class="source-pending">Source link being verified</span>';
+        return '<a class="source-link" href="' + escapeHtml(event.source) + '" target="_blank" rel="noopener noreferrer">View original listing <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 5h5v5"></path><path d="m10 14 9-9"></path><path d="M19 13v6H5V5h6"></path></svg></a>';
+      }
+
+      function eventKey(event) {
+        return event.date + "|" + event.name;
+      }
+
+      function claimMailto(event) {
+        const subject = "Claim or update: " + event.name;
+        const body = [
+          "Event: " + event.name,
+          "Current listing: " + (event.source || "No source link listed"),
+          "Event date: " + (event.dateLabel || event.date),
+          "",
+          "My name and role with the event:",
+          "Best email or phone number:",
+          "What I want to add or change:",
+          "Official website, social page, or other proof I represent this event:"
+        ].join("\n");
+        return "mailto:lola@saxtonshowcase.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      }
+
+      function renderCard(event) {
+        const date = new Date(event.date + "T12:00:00Z");
+        const parts = dateFormatter.formatToParts(date);
+        const month = parts.find(function (part) { return part.type === "month"; }).value;
+        const day = parts.find(function (part) { return part.type === "day"; }).value;
+        const weekday = parts.find(function (part) { return part.type === "weekday"; }).value;
+        const visualDate = event.dateLabel || (month + " " + day);
+        const key = eventKey(event);
+        const picked = selectedEvents.has(key);
+        return '<article class="event-card' + (picked ? ' is-selected' : '') + '">' +
+          '<div class="date-block" aria-label="' + escapeHtml(event.dateLabel || dateFormatter.format(date)) + '"><span class="date-month">' + escapeHtml(event.dateLabel ? visualDate : month) + '</span>' + (event.dateLabel ? '' : '<span class="date-day">' + escapeHtml(day) + '</span>') + '</div>' +
+          '<div class="event-content"><p class="event-topline">' + escapeHtml(weekday + " · " + event.time + " · " + event.town) + '</p>' +
+          '<div class="event-heading-row"><h3>' + escapeHtml(event.name) + '</h3><label class="pick-control"><input class="event-pick" type="checkbox" value="' + escapeHtml(key) + '"' + (picked ? ' checked' : '') + ' aria-label="Add ' + escapeHtml(event.name) + ' to fridge PDF"><span>' + (picked ? 'Added' : 'Add') + '</span></label></div>' +
+          '<div class="tags"><span class="tag">' + escapeHtml(event.typeLabel) + '</span><span class="tag age">' + escapeHtml(event.ageLabel) + '</span></div>' +
+          '<dl class="details"><div class="detail"><dt>Where</dt><dd>' + escapeHtml(event.address) + '</dd></div>' +
+          '<div class="detail"><dt>Cost</dt><dd>' + escapeHtml(event.cost) + '</dd></div>' +
+          '<div class="detail"><dt>Access</dt><dd>' + escapeHtml(event.accessLabel) + '</dd></div></dl>' +
+          '<p class="event-note">' + escapeHtml(event.note) + '</p><div class="event-links">' + sourceMarkup(event) +
+          '<a class="claim-link" href="' + claimMailto(event) + '" data-claim-key="' + escapeHtml(key) + '">Own this event? Claim or update it</a></div></div></article>';
+      }
+
+      function showEvents(queryValue) {
+        const query = String(queryValue || "").trim().toLowerCase();
+        const filtered = events.filter(function (event) {
+          const haystack = [event.name, event.town, event.venue, event.address, event.typeLabel, event.note].join(" ").toLowerCase();
+          return !query || haystack.indexOf(query) !== -1;
+        });
+        list.innerHTML = filtered.map(renderCard).join("");
+        count.textContent = filtered.length + (filtered.length === 1 ? " event" : " events");
+        empty.style.display = filtered.length ? "none" : "block";
+        list.style.display = filtered.length ? "grid" : "none";
+      }
+
+      function applySearch() {
+        showEvents(search.value);
+      }
+
+      function updatePlanTray() {
+        const total = selectedEvents.size;
+        planCount.textContent = total ? total + (total === 1 ? " event picked" : " events picked") : "Pick events for your fridge";
+        downloadPlan.disabled = total === 0;
+        clearPlan.hidden = total === 0;
+        document.body.classList.toggle("has-selections", total > 0);
+      }
+
+      function pdfSafe(value) {
+        return String(value)
+          .replace(/[–—]/g, "-")
+          .replace(/[’‘]/g, "'")
+          .replace(/[“”]/g, '"')
+          .replace(/…/g, "...")
+          .replace(/[^\x20-\x7E]/g, "")
+          .replace(/\\/g, "\\\\")
+          .replace(/\(/g, "\\(")
+          .replace(/\)/g, "\\)");
+      }
+
+      function wrapPdfText(value, maxLength) {
+        const words = pdfSafe(value).split(/\s+/);
+        const lines = [];
+        let line = "";
+        words.forEach(function (word) {
+          if (!line) line = word;
+          else if ((line + " " + word).length <= maxLength) line += " " + word;
+          else { lines.push(line); line = word; }
+        });
+        if (line) lines.push(line);
+        return lines;
+      }
+
+      function pdfText(text, x, y, size, bold, color, fontName) {
+        const rgb = color || "0.12 0.09 0.08";
+        const font = fontName || (bold ? "F2" : "F1");
+        return "BT " + rgb + " rg /" + font + " " + size + " Tf 1 0 0 1 " + x + " " + y + " Tm (" + pdfSafe(text) + ") Tj ET\n";
+      }
+
+      function pdfCircle(x, y, radius, color) {
+        const c = radius * 0.5522848;
+        return color + " rg " +
+          (x + radius) + " " + y + " m " +
+          (x + radius) + " " + (y + c) + " " + (x + c) + " " + (y + radius) + " " + x + " " + (y + radius) + " c " +
+          (x - c) + " " + (y + radius) + " " + (x - radius) + " " + (y + c) + " " + (x - radius) + " " + y + " c " +
+          (x - radius) + " " + (y - c) + " " + (x - c) + " " + (y - radius) + " " + x + " " + (y - radius) + " c " +
+          (x + c) + " " + (y - radius) + " " + (x + radius) + " " + (y - c) + " " + (x + radius) + " " + y + " c f\n";
+      }
+
+      function pdfGhost(x, y, scale, bodyColor, faceColor) {
+        const s = scale;
+        let art = bodyColor + " rg " +
+          x + " " + y + " m " +
+          x + " " + (y + 24 * s) + " " + (x + 12 * s) + " " + (y + 38 * s) + " " + (x + 28 * s) + " " + (y + 38 * s) + " c " +
+          (x + 44 * s) + " " + (y + 38 * s) + " " + (x + 56 * s) + " " + (y + 24 * s) + " " + (x + 56 * s) + " " + y + " c " +
+          (x + 56 * s) + " " + (y - 8 * s) + " l " +
+          (x + 47 * s) + " " + (y - 2 * s) + " l " +
+          (x + 39 * s) + " " + (y - 9 * s) + " l " +
+          (x + 30 * s) + " " + (y - 2 * s) + " l " +
+          (x + 21 * s) + " " + (y - 9 * s) + " l " +
+          (x + 12 * s) + " " + (y - 2 * s) + " l " +
+          x + " " + (y - 8 * s) + " l h f\n";
+        art += pdfCircle(x + 20 * s, y + 17 * s, 2.7 * s, faceColor);
+        art += pdfCircle(x + 36 * s, y + 17 * s, 2.7 * s, faceColor);
+        art += faceColor + " RG " + (1.8 * s) + " w " +
+          (x + 21 * s) + " " + (y + 7 * s) + " m " +
+          (x + 27 * s) + " " + (y + 2 * s) + " " + (x + 33 * s) + " " + (y + 2 * s) + " " + (x + 37 * s) + " " + (y + 7 * s) + " c S\n";
+        return art;
+      }
+
+      function pdfBat(x, y, scale, color) {
+        const s = scale;
+        return color + " rg " +
+          x + " " + y + " m " +
+          (x + 7 * s) + " " + (y + 8 * s) + " " + (x + 15 * s) + " " + (y + 7 * s) + " " + (x + 22 * s) + " " + y + " c " +
+          (x + 29 * s) + " " + (y + 7 * s) + " " + (x + 37 * s) + " " + (y + 8 * s) + " " + (x + 44 * s) + " " + y + " c " +
+          (x + 38 * s) + " " + (y - 1 * s) + " " + (x + 34 * s) + " " + (y - 5 * s) + " " + (x + 31 * s) + " " + (y - 10 * s) + " c " +
+          (x + 27 * s) + " " + (y - 6 * s) + " " + (x + 25 * s) + " " + (y - 4 * s) + " " + (x + 22 * s) + " " + (y - 4 * s) + " c " +
+          (x + 19 * s) + " " + (y - 4 * s) + " " + (x + 17 * s) + " " + (y - 6 * s) + " " + (x + 13 * s) + " " + (y - 10 * s) + " c " +
+          (x + 10 * s) + " " + (y - 5 * s) + " " + (x + 6 * s) + " " + (y - 1 * s) + " " + x + " " + y + " c h f\n";
+      }
+
+      function makeFridgePdf(picked) {
+        const perPage = 4;
+        const pageCount = Math.ceil(picked.length / perPage);
+        const regularFontObject = 3 + pageCount * 2;
+        const boldFontObject = regularFontObject + 1;
+        const displayFontObject = boldFontObject + 1;
+        const objects = [];
+        objects[1] = "<< /Type /Catalog /Pages 2 0 R >>";
+        const kids = [];
+
+        for (let pageIndex = 0; pageIndex < pageCount; pageIndex += 1) {
+          const pageObject = 3 + pageIndex * 2;
+          const contentObject = pageObject + 1;
+          kids.push(pageObject + " 0 R");
+          objects[pageObject] = "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 " + regularFontObject + " 0 R /F2 " + boldFontObject + " 0 R /F3 " + displayFontObject + " 0 R >> >> /Contents " + contentObject + " 0 R >>";
+
+          let stream = "0.984 0.965 0.918 rg 0 0 612 792 re f\n";
+          stream += "0.196 0.102 0.278 rg 0 666 612 126 re f\n";
+          stream += "0.835 0.294 0.102 rg 0 666 612 8 re f\n";
+          stream += "0.867 0.78 0.922 rg 38 781 3 3 re f 82 754 2 2 re f 166 776 2 2 re f 249 748 3 3 re f 367 776 2 2 re f 458 758 2 2 re f\n";
+          stream += pdfCircle(538, 747, 32, "1 0.851 0.471");
+          stream += pdfGhost(494, 688, 1.25, "1 0.98 0.94", "0.196 0.102 0.278");
+          stream += pdfBat(421, 735, 0.7, "0.075 0.047 0.094");
+          stream += pdfBat(468, 770, 0.45, "0.075 0.047 0.094");
+          stream += pdfText("Halloween plans", 38, 735, 25, true, "1 0.98 0.94", "F3");
+          stream += pdfText("419 Halloween Fun  |  Northwest Ohio", 40, 711, 10, true, "1 0.851 0.471");
+          stream += pdfText(pageCount === 1 ? "A fridge-worthy lineup" : "A fridge-worthy lineup  -  page " + (pageIndex + 1) + " of " + pageCount, 40, 694, 9, false, "0.867 0.78 0.922");
+
+          const pageEvents = picked.slice(pageIndex * perPage, (pageIndex + 1) * perPage);
+          pageEvents.forEach(function (event, slot) {
+            const top = 642 - slot * 142;
+            const bottom = top - 124;
+            const eventDate = new Date(event.date + "T12:00:00Z");
+            const dateParts = dateFormatter.formatToParts(eventDate);
+            const month = dateParts.find(function (part) { return part.type === "month"; }).value.toUpperCase();
+            const day = dateParts.find(function (part) { return part.type === "day"; }).value;
+            const printableDate = event.dateLabel || dateFormatter.format(eventDate);
+
+            stream += "0.24 0.15 0.29 rg 43 " + (bottom - 4) + " 530 124 re f\n";
+            stream += "1 0.992 0.973 rg 38 " + bottom + " 536 124 re f\n";
+            stream += "0.851 0.796 0.722 RG 1 w 38 " + bottom + " 536 124 re S\n";
+            stream += "0.835 0.294 0.102 rg 48 " + (top - 49) + " 62 45 re f\n";
+            stream += pdfText(month, 60, top - 20, 8, true, "1 0.98 0.94");
+            stream += pdfText(day, 67, top - 42, 20, true, "1 0.98 0.94", "F3");
+            stream += pdfText(printableDate, 48, top - 64, 7.5, true, "0.616 0.184 0.039");
+
+            const nameLines = wrapPdfText(event.name, 42).slice(0, 2);
+            nameLines.forEach(function (line, lineIndex) {
+              stream += pdfText(line, 124, top - 17 - lineIndex * 14, 12, true, "0.196 0.102 0.278", "F3");
+            });
+            let cursor = top - 20 - nameLines.length * 14;
+            stream += pdfText(event.time, 124, cursor, 8.5, true, "0.616 0.184 0.039");
+            cursor -= 15;
+            wrapPdfText(event.address + (event.town ? "  |  " + event.town : ""), 65).slice(0, 2).forEach(function (line, lineIndex) {
+              stream += pdfText((lineIndex ? "" : "WHERE  ") + line, 124, cursor, 8, false, "0.20 0.17 0.15");
+              cursor -= 11;
+            });
+            stream += pdfText("COST  " + event.cost, 124, cursor, 8, false, "0.20 0.17 0.15");
+            cursor -= 12;
+            stream += pdfText("AGES  " + event.ageLabel, 124, cursor, 8, false, "0.20 0.17 0.15");
+
+            stream += pdfGhost(532, top - 41, 0.42, "0.925 0.875 0.949", "0.196 0.102 0.278");
+            if (slot % 2 === 1) stream += pdfBat(536, bottom + 14, 0.32, "0.835 0.294 0.102");
+          });
+
+          stream += "0.133 0.302 0.239 RG 1.5 w 38 48 m 574 48 l S\n";
+          stream += pdfBat(40, 31, 0.28, "0.196 0.102 0.278");
+          stream += pdfText("Check the original listing before you go - Halloween plans can change!", 62, 29, 8, false, "0.35 0.31 0.29");
+          stream += pdfText((pageIndex + 1) + " / " + pageCount, 548, 29, 8, true, "0.616 0.184 0.039");
+          objects[contentObject] = "<< /Length " + stream.length + " >>\nstream\n" + stream + "endstream";
+        }
+
+        objects[2] = "<< /Type /Pages /Count " + pageCount + " /Kids [" + kids.join(" ") + "] >>";
+        objects[regularFontObject] = "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>";
+        objects[boldFontObject] = "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>";
+        objects[displayFontObject] = "<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold >>";
+
+        let pdf = "%PDF-1.4\n%Halloween\n";
+        const offsets = [0];
+        for (let i = 1; i < objects.length; i += 1) {
+          offsets[i] = pdf.length;
+          pdf += i + " 0 obj\n" + objects[i] + "\nendobj\n";
+        }
+        const xref = pdf.length;
+        pdf += "xref\n0 " + objects.length + "\n0000000000 65535 f \n";
+        for (let j = 1; j < objects.length; j += 1) {
+          pdf += String(offsets[j]).padStart(10, "0") + " 00000 n \n";
+        }
+        pdf += "trailer\n<< /Size " + objects.length + " /Root 1 0 R >>\nstartxref\n" + xref + "\n%%EOF";
+        return pdf;
+      }
+
+      list.addEventListener("change", function (event) {
+        if (!event.target.classList.contains("event-pick")) return;
+        if (event.target.checked) selectedEvents.add(event.target.value);
+        else selectedEvents.delete(event.target.value);
+        applySearch();
+        updatePlanTray();
+      });
+
+      function clearPdfUrl() {
+        if (!currentPdfUrl) return;
+        URL.revokeObjectURL(currentPdfUrl);
+        currentPdfUrl = "";
+      }
+
+      clearPlan.addEventListener("click", function () {
+        selectedEvents.clear();
+        clearPdfUrl();
+        planStatus.textContent = "";
+        applySearch();
+        updatePlanTray();
+      });
+
+      function isAppleMobileDevice() {
+        return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+          (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      }
+
+      function showPdfFallback(blob) {
+        clearPdfUrl();
+        currentPdfUrl = URL.createObjectURL(blob);
+
+        const openLink = document.createElement("a");
+        openLink.href = currentPdfUrl;
+        openLink.textContent = isAppleMobileDevice() ? "Open PDF" : "Download it again";
+        if (!isAppleMobileDevice()) openLink.download = "419-halloween-fridge-plans.pdf";
+
+        const actionWrap = document.createElement("span");
+        actionWrap.className = "pdf-actions";
+        actionWrap.appendChild(openLink);
+        planStatus.replaceChildren(
+          document.createTextNode(isAppleMobileDevice() ? "Your PDF is ready. " : "Your PDF is ready. "),
+          actionWrap
+        );
+        openLink.click();
+      }
+
+      async function deliverFridgePdf() {
+        const picked = events.filter(function (event) { return selectedEvents.has(eventKey(event)); });
+        if (!picked.length) return;
+        const pdf = makeFridgePdf(picked);
+        const blob = new Blob([pdf], { type: "application/pdf" });
+        const file = typeof File === "function"
+          ? new File([blob], "419-halloween-fridge-plans.pdf", { type: "application/pdf" })
+          : null;
+        const canShareFile = isAppleMobileDevice() && file && typeof navigator.share === "function" &&
+          typeof navigator.canShare === "function" && navigator.canShare({ files: [file] });
+
+        if (canShareFile) {
+          try {
+            await navigator.share({
+              files: [file],
+              title: "419 Halloween Fridge Plans"
+            });
+            planStatus.textContent = "PDF shared. Choose Save to Files in the iPhone share sheet to keep a copy.";
+            return;
+          } catch (error) {
+            if (error && error.name === "AbortError") {
+              const tryAgain = document.createElement("button");
+              tryAgain.type = "button";
+              tryAgain.textContent = "Open the share sheet again";
+              tryAgain.addEventListener("click", deliverFridgePdf);
+              const actionWrap = document.createElement("span");
+              actionWrap.className = "pdf-actions";
+              actionWrap.appendChild(tryAgain);
+              planStatus.replaceChildren(document.createTextNode("Share canceled. "), actionWrap);
+              return;
+            }
+          }
+        }
+
+        showPdfFallback(blob);
+      }
+
+      downloadPlan.addEventListener("click", deliverFridgePdf);
+
+      eventSearch.addEventListener("submit", function (event) {
+        event.preventDefault();
+        applySearch();
+      });
+      reset.addEventListener("click", function () {
+        search.value = "";
+        showEvents("");
+        search.focus();
+      });
+
+      function updateSubmissionMode() {
+        const isClaim = requestKind.value === "claim";
+        claimEventField.hidden = !isClaim;
+        claimEvent.required = isClaim;
+        eventUrl.required = !isClaim;
+        eventName.required = false;
+        eventUrlLabel.textContent = isClaim ? "OFFICIAL EVENT LINK (OPTIONAL)" : "EVENT LINK";
+        eventNameLabel.textContent = "EVENT NAME (OPTIONAL)";
+        eventUrlHelp.textContent = isClaim
+          ? "Add an official link if you have one."
+          : "Required for a new event so we can verify the details.";
+        submitButton.textContent = isClaim ? "Open claim email" : "Open email to send";
+        eventUrl.setCustomValidity("");
+      }
+
+      claimEvent.addEventListener("change", function () {
+        const selected = events.find(function (item) { return eventKey(item) === claimEvent.value; });
+        if (!selected) return;
+        eventName.value = selected.name;
+        eventDate.value = selected.date;
+        eventUrl.value = selected.source || "";
+      });
+
+      requestKind.addEventListener("change", function () {
+        claimEvent.value = "";
+        eventUrl.value = "";
+        eventName.value = "";
+        eventDate.value = "";
+        eventNote.value = "";
+        submitStatus.textContent = "";
+        updateSubmissionMode();
+      });
+
+      list.addEventListener("click", function (clickEvent) {
+        const claimLink = clickEvent.target.closest(".claim-link");
+        if (!claimLink) return;
+        const claimedEvent = events.find(function (item) { return eventKey(item) === claimLink.dataset.claimKey; });
+        if (!claimedEvent) return;
+        clickEvent.preventDefault();
+        requestKind.value = "claim";
+        updateSubmissionMode();
+        claimEvent.value = eventKey(claimedEvent);
+        eventUrl.value = claimedEvent.source || "";
+        eventName.value = claimedEvent.name;
+        eventDate.value = claimedEvent.date;
+        eventNote.value = "I’d like to claim this listing and add or update: ";
+        submitStatus.textContent = "Listing loaded. Add your contact details and the information you want changed.";
+        submitPanel.open = true;
+        submitPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.setTimeout(function () { ownerContact.focus(); }, 350);
+      });
+
+      submissionForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!submissionForm.reportValidity()) return;
+        const isClaim = requestKind.value === "claim";
+        const subject = (isClaim ? "Claim or update: " : "New Halloween event: ") + (eventName.value.trim() || eventUrl.value.trim());
+        const body = [
+          "Request: " + (isClaim ? "Claim or update a listed event" : "Submit a new event"),
+          "Event link: " + eventUrl.value.trim(),
+          "Event name: " + eventName.value.trim(),
+          "Date: " + eventDate.value,
+          "Name: " + submittedBy.value.trim(),
+          "Reply to: " + ownerContact.value.trim(),
+          "Details or changes: " + eventNote.value.trim(),
+          "",
+          isClaim ? "I can provide an official site, social page, or other proof that I represent this event." : "Sent from the Halloween 2026 NW Ohio fun finder."
+        ].join("\n");
+        const emailLink = document.createElement("a");
+        emailLink.href = "mailto:lola@saxtonshowcase.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        emailLink.textContent = "Tap here if your email app didn’t open.";
+        submitStatus.replaceChildren(
+          document.createTextNode("Review the message and tap Send in your email app. "),
+          emailLink
+        );
+        emailLink.click();
+      });
+
+      search.value = "";
+      updateSubmissionMode();
+      showEvents("");
+      updatePlanTray();
+    </script>
+  </body>
+</html>
