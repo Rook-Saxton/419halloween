@@ -913,6 +913,8 @@
       const ownerContact = document.getElementById("owner-contact");
       const claimEventField = document.getElementById("claim-event-field");
       const claimEvent = document.getElementById("claim-event");
+      // Claim options mirror the current, non-expired public list.
+      claimEvent.replaceChildren(new Option("Choose an event", ""), ...events.map(function(event) { return new Option(event.name, eventKey(event)); }));
       const eventUrl = document.getElementById("event-url");
       const eventUrlLabel = document.getElementById("event-url-label");
       const eventUrlHelp = document.getElementById("event-url-help");
